@@ -1,0 +1,15 @@
+#body{
+    
+    background-color: gray;
+    width: 400px;
+    height: 350px;
+    margin: 200px auto 30px;
+    text-align: center;
+}
+button{
+    margin-left: 10px;
+    width: 100px;
+}
+body{
+    background-color: black;
+}
