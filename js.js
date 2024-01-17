@@ -18,7 +18,7 @@ const shirt = ["red", "green","blue","grey","pink","Orange","Yellow"];
 let mainTarget = shirt[Math.floor(Math.random()*shirt.length)];
 let currentTarget =  shirt[Math.floor(Math.random()*shirt.length)];
 text.innerText = `Your Target it Wearing a ${mainTarget} Shirt`;
-hit.innerText = `Persion you are aiming at is whering a ${currentTarget} Shirt`;
+hit.innerText = `Person you are aiming at is whering a ${currentTarget} Shirt`;
 
 function right(){
     currentTarget =  shirt[Math.floor(Math.random()*shirt.length)];
