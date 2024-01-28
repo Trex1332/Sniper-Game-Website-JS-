@@ -1,6 +1,5 @@
 const buttonRight = document.querySelector("#Right");
 const btnShoot = document.querySelector("#Shoot");
-const btnLeft = document.querySelector("#left");
 const text = document.querySelector("#about")
 const hitOrNot = document.querySelector("#hit")
 const hightScore = document.querySelector("#High")
@@ -10,7 +9,6 @@ let highScore = 0;
 
 buttonRight.onclick = right;
 btnShoot.onclick = shoot;
-btnLeft.onclick = left;
 console.log(score);
 
 
@@ -32,8 +30,7 @@ function shoot(){
         score +=1;
         console.log(score);
         currentScore.innerText = score;
-        mainTarget = shirt[Math.floor(Math.random()*shirt.length)];
-        text.innerText = `Your Target it Wearing a ${mainTarget} Shirt`;
+        changeTargets()
     }
     else{
         hit.innerText = `you killed the Wrong Person`;
@@ -48,13 +45,20 @@ function shoot(){
             score = 0;
             currentScore.innerText = score;
         }
-        
+        changeTargets()
         
     }
 }
 function left(){
     currentTarget =  shirt[Math.floor(Math.random()*shirt.length)];
     console.log(currentTarget);
+    hit.innerText = `Person you are aiming at is wearing a ${currentTarget} Shirt`;
+}
+function changeTargets()
+{
+    mainTarget = shirt[Math.floor(Math.random()*shirt.length)];
+    text.innerText = `Your Target it Wearing a ${mainTarget} Shirt`;
+    currentTarget =  shirt[Math.floor(Math.random()*shirt.length)];
     hit.innerText = `Person you are aiming at is wearing a ${currentTarget} Shirt`;
 }
 console.log(mainTarget);
